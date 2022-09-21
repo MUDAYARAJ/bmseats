@@ -24,6 +24,8 @@
                 <li><a href="products.php">PRODUCTS</a></li>
                 <li><a href="hotels.php">HOTELS</a></li>
                 <li><a href="users.php">USERS</a></li>
+                <li><a href="../login.php">LOGOUT</a></li>
+
             </ul>
         </div>
     </nav>

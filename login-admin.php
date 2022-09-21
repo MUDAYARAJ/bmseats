@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- jQuery library -->
     <!-- Latest compiled JavaScript -->
-    
+
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
@@ -19,12 +19,13 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="./bmseats/login.php">BMS-EATS</a>
+                <a class="navbar-brand" href="./login.php">BMS-EATS</a>
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="products.php">PRODUCTS</a></li>
                 <li><a href="hotels.php">HOTELS</a></li>
                 <li><a href="users.php">USERS</a></li>
+                <li><a href="./login.php">LOGOUT</a></li>
             </ul>
         </div>
     </nav>
@@ -58,7 +59,7 @@
                             <div class="form-group">
                                 <button type="submit" class="btn btn-block btn-primary">Login</button>
                             </div>
-                            
+
                         </form>
                     </div>
                 </div>
@@ -73,8 +74,8 @@
                                     placeholder="Enter valid email" required>
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold">Phone<span class="text-danger">*</span></label>
-                                <input type="text" name="mob" id="signupphone" class="form-control" placeholder="">
+                                <label class="font-weight-bold">Hotel-id<span class="text-danger">*</span></label>
+                                <input type="text" name="hid" id="signupphone" class="form-control" placeholder="">
                             </div>
                             <div class="form-group">
                                 <label class="font-weight-bold">Password <span class="text-danger">*</span></label>
@@ -87,6 +88,7 @@
                                 <button type="submit" class="btn btn-block btn-primary">Register</button>
                             </div>
                     </form>
+
                 </div>
             </div>
         </div>
@@ -100,21 +102,22 @@
       $type = $_POST['type'];
       if ($type == 'register') {
         $name = $_POST['email'];
-        $mob = $_POST['mob'];
+        $hid = $_POST['hid'];
+        //$_SESSION['hid']=$_POST['hid'];
         $password = $_POST['passwordnew'];
-        $q = " select * from users where username = '$name'";
+        $q = " select * from admin where username = '$name'";
         $result = mysqli_query($con, $q);
         if (mysqli_num_rows($result) == 1) {
           echo '<script>alert("USER ALREADY EXISTS")</script>';
         } else {
-          $i = " insert into users values('$name','$mob','$password','')";
+          $i = " insert into admin values('$name','$mob','$password','')";
           mysqli_query($con, $i);
           echo '<script>alert("REGISTRATION SUCCESFULL")</script>';
         }
       } else if ($type == 'login') {
         $name = $_POST['email'];
         $pass = $_POST['password'];
-        $q = " select * from users where username = '$name' and password = '$pass'";
+        $q = " select * from admin where username = '$name' and password = '$pass'";
         $res = mysqli_query($con, $q);
 
         if (mysqli_num_rows($res) == 0) {
@@ -123,7 +126,7 @@
           $_SESSION['username'] = $name;
          // echo '<script>alert("LOGGED IN SUCCESFULLY")</script>';
        //header('location:index.php');
-         echo "<script>window.location = 'index.php'</script>";
+         echo "<script>window.location = './admin/products.php'</script>";
         }
       }
     }
