@@ -232,7 +232,7 @@ error_reporting(E_ERROR | E_PARSE);
                                             </div>
                                             <h5 class="modal-title text-uppercase mb-3" id="exampleModalLabel">
                                                 <?php
-                                   echo  $_POST['fname'] . $_POST['lname'];
+                                   echo  $_POST['fname'] . " " .$_POST['lname'];
                                     ?></h5>
                                             </h5>
                                             <h4 class="mb-3" style="color: #35558a;">Thanks for your order</h4>
