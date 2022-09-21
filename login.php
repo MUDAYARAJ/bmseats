@@ -54,7 +54,11 @@ if($_SESSION['username'])
                             <div class="form-group">
                                 <button type="submit" class="btn btn-block btn-primary">Login</button>
                             </div>
+                            
                         </form>
+                        <div class="form-group">
+                                <a href="./login-admin.php" style="text-decoration:none;"><button class="btn btn-block btn-primary">Admin-login</button></a>
+                            </div>
                     </div>
                 </div>
 
