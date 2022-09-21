@@ -110,7 +110,7 @@
         if (mysqli_num_rows($result) == 1) {
           echo '<script>alert("USER ALREADY EXISTS")</script>';
         } else {
-          $i = " insert into admin values('$name','$mob','$password','')";
+          $i = " insert into admin values('$name','$hid','$password','')";
           mysqli_query($con, $i);
           echo '<script>alert("REGISTRATION SUCCESFULL")</script>';
         }
