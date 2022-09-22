@@ -11,11 +11,15 @@ if($_SESSION['username'])
 
 <head>
     <style>
-    html,
+    html{
+        width: 100%;
+        height: 100%;}
     body {
         width: 100%;
-        height: 100%;
-        margin: 0;
+        min-height: 100%;
+        padding: 0px;
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,123,255,1) 100%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+        background-repeat:no-repeat
     }
     </style>
     <!-- Required meta tags -->
@@ -29,10 +33,9 @@ if($_SESSION['username'])
     <title>LOGIN</title>
 </head>
 
-<body
-    style="background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,123,255,1) 100%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);background-repeat:no-repeat">
-
-    <div class="container" style="margin-top :10vh;width:50vw">
+<body>
+    
+    <div class="container" style="padding-top:10vw;width:50vw">
         <h1 style="text-align: center;width: max-content;margin: auto;font-size:50px ">BMS-EATS</h1>
         <div class="col-sm-8 ml-auto mr-auto">
             <ul class="nav nav-pills nav-fill mb-1" id="pills-tab" role="tablist">
@@ -101,6 +104,7 @@ if($_SESSION['username'])
         </div>
 
     </div>
+   
     <?php
     $con = mysqli_connect('localhost', 'root', '');
     mysqli_select_db($con, 'hotel_list');
@@ -150,5 +154,6 @@ if($_SESSION['username'])
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
     </script>
 </body>
+
 
 </html>
