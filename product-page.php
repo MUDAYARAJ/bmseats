@@ -33,8 +33,8 @@ $h = $hid->fetch_array()[0] ?? '';
     <div class="sideBar w3-display-topright" id="sideBar">
         <ul>
             <li><button id="closeBtn" onclick="closeSide()">X Close</button></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="about.php">ABOUT</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
             <li><a href="./cart_page.php">CART</a></li>
 
         </ul>
@@ -52,8 +52,8 @@ $h = $hid->fetch_array()[0] ?? '';
 
                 <a href="cart_page.php"><i style="float: right;color:black;padding: 14px;"
                         class="material-icons">shopping_cart</i></a>
-                <li style="float: right;"><a href="./about.html">ABOUT</a></li>
-                <li style="float: right;"><a href="contact1.html">CONTACT</a></li>
+                <li style="float: right;"><a href="./about.php">ABOUT</a></li>
+                <li style="float: right;"><a href="contact.php">CONTACT</a></li>
 
             </ul>
             <button class="menuIcon" id="menuBtn" onclick="openSide()"><i style="padding: 14px;"

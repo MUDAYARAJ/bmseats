@@ -11,11 +11,11 @@
 
 
 
-            <a href="about.html">About</a>
+            <a href="about.php">About</a>
 
 
 
-            <a href="contact1.html">Contact</a>
+            <a href="contact.php">Contact</a>
         </p>
 
         <p class="footer-company-name">BMSEATS © 2022</p>
