@@ -22,10 +22,9 @@
                 <a class="navbar-brand" href="./login.php">BMS-EATS</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="products.php">PRODUCTS</a></li>
-                <li><a href="hotels.php">HOTELS</a></li>
-                <li><a href="users.php">USERS</a></li>
-                <li><a href="./login.php">LOGOUT</a></li>
+
+
+                <li><a href="./login.php">BACK</a></li>
             </ul>
         </div>
     </nav>

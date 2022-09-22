@@ -27,8 +27,8 @@ $database=new createDb("hotel_list","products");
     <div class="sideBar w3-display-topright" id="sideBar">
         <ul>
             <li><button id="closeBtn" onclick="closeSide()">X Close</button></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="about.php">ABOUT</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
             <li><a href="./cart_page.php">CART</a></li>
 
         </ul>
@@ -38,16 +38,16 @@ $database=new createDb("hotel_list","products");
 
             <img src="./photos/download (1).jpg" class="avo-icon" width="70" style="float: left;">
             <a href="./index.php">
-                <h1 class="avo-title" style="float: left; color:black;">BMS EATS -
-                    <H1 class="hotel_name">VIDYARTHI KHAANA</H1>
+                <h1 class="avo-title" style="float: left; color:black;">BMS EATS
+                    <H1 class="hotel_name"></H1>
                 </h1>
             </a>
             <ul class="topnav">
 
                 <a href="cart_page.php"><i style="float: right;color:black;padding: 14px;"
                         class="material-icons">shopping_cart</i></a>
-                <li style="float: right;"><a href="./about.html">ABOUT</a></li>
-                <li style="float: right;"><a href="contact1.html">CONTACT</a></li>
+                <li style="float: right;"><a href="./about.php">ABOUT</a></li>
+                <li style="float: right;"><a href="contact.php">CONTACT</a></li>
 
             </ul>
             <button class="menuIcon" id="menuBtn" onclick="openSide()"><i style="padding: 14px;"
