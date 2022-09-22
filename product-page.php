@@ -3,6 +3,12 @@ session_start();
 $_SESSION['product_id']= $_POST['product_id'];
 require_once('ckDb.php');
 $database=new createDb("hotel_list","products");
+$db = new mysqli('localhost','root','','hotel_list');
+$_SESSION['hotel_id']=$_POST['hotel_id'];
+$hid = $_SESSION['hotel_id'];
+//echo $hid;
+$hid = $db->query("select hotel_name from hotels where hid = '$hid'");
+$h = $hid->fetch_array()[0] ?? '';
 ?>
 
 
@@ -13,7 +19,7 @@ $database=new createDb("hotel_list","products");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIDYARTHI KHANA-food</title>
+    <title><?php echo $h;?>-food</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="product-page.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -39,7 +45,7 @@ $database=new createDb("hotel_list","products");
             <img src="./photos/download (1).jpg" class="avo-icon" width="70" style="float: left;">
             <a href="./index.php">
                 <h1 class="avo-title" style="float: left; color:black;">BMS EATS -
-                    <H1 class="hotel_name">VIDYARTHI KHAANA</H1>
+                    <H1 class="hotel_name"><?php echo $h;?></H1>
                 </h1>
             </a>
             <ul class="topnav">
