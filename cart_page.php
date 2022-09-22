@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ERROR | E_PARSE);
+error_reporting(0);
 session_start();
 require_once('ckDb.php');
 require_once('cart_page_component.php');
