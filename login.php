@@ -10,6 +10,14 @@ if($_SESSION['username'])
 ?>
 
 <head>
+    <style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    </style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +29,8 @@ if($_SESSION['username'])
     <title>LOGIN</title>
 </head>
 
-<body>
+<body
+    style="background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,123,255,1) 100%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);background-repeat:no-repeat">
 
     <div class="container" style="margin-top :10vh;width:50vw">
         <h1 style="text-align: center;width: max-content;margin: auto;font-size:50px ">BMS-EATS</h1>
@@ -54,11 +63,12 @@ if($_SESSION['username'])
                             <div class="form-group">
                                 <button type="submit" class="btn btn-block btn-primary">Login</button>
                             </div>
-                            
+
                         </form>
                         <div class="form-group">
-                                <a href="./login-admin.php" style="text-decoration:none;"><button class="btn btn-block btn-primary">Admin-login</button></a>
-                            </div>
+                            <a href="./login-admin.php" style="text-decoration:none;"><button
+                                    class="btn btn-block btn-primary">Admin-login</button></a>
+                        </div>
                     </div>
                 </div>
 
