@@ -1,4 +1,4 @@
-use database `hotel_list`;
+use `hotel_list`;
 
 CREATE TABLE `checkout` (
   `first_name` varchar(100) NOT NULL,
@@ -96,6 +96,27 @@ INSERT INTO `checkout` (`first_name`, `last_name`, `usn`, `email`, `sem`, `mode`
 
 -- --------------------------------------------------------
 
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `username` varchar(33) NOT NULL,
+  `hid` int NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `aid` int NOT NULL
+) ;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`username`, `hid`, `password`, `aid`) VALUES
+('asd@gmail.xom', 3, '123456', 1),
+('suri@gmail.com', 1, '123456', 2),
+('CSE@GMAIL.COM', 1, '123456', 3);
+
+-- --------------------------------------------------------
 --
 -- Table structure for table `cust`
 --
@@ -266,7 +287,11 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`aid`);
 --
 -- AUTO_INCREMENT for table `hotels`
 --
@@ -280,6 +305,12 @@ ALTER TABLE `users`
   MODIFY `uid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `aid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -289,7 +320,3 @@ ALTER TABLE `users`
 ALTER TABLE `cust`
   ADD CONSTRAINT `uid` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
